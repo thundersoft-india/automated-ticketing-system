@@ -37,12 +37,14 @@ def index():
     return render_template('index.html')
     # return render_template('ticket_generation.html')
 
-@app.route('/login',methods=['GET','POST'])
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method=='POST':
-        session['username']=request.form['username']
+    if request.method == 'POST':
+        session['username'] = request.form['username']
         return redirect(url_for('index'))
     return render_template('login.html')
+
 
 @app.route('/logout')
 def logout():
@@ -53,7 +55,7 @@ def logout():
 # receives the data from the webpage and sends the processed string back
 @app.route('/getQR', methods=['POST'])
 def getQR():
-    global result
+    # global result
     errors = []
     if request.method == 'POST':
         try:
@@ -74,8 +76,7 @@ def getQR():
 
             # converting the dict to QR code format
             result = str(ticket_num).zfill(ticket_num_length) + str(m_id).zfill(m_id_length) + str(s_epoch).zfill(
-                s_epoch_length) \
-                     + str(adult).zfill(adult_length) + str(child).zfill(child_length)
+                s_epoch_length) + str(adult).zfill(adult_length) + str(child).zfill(child_length)
             print(result)
         except:
             errors.append("Please verify details in the form")
