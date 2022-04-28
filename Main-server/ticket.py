@@ -1,29 +1,29 @@
-#from flask import Flask, request, render_template, redirect, url_for, session
-#from flask_pymongo import PyMongo
-#from pyqrcode import QRCode
-#from flask_qrcode import QRcode
+from flask import Flask, request, render_template, redirect, url_for, session
+from flask_pymongo import PyMongo
+from pyqrcode import QRCode
+from flask_qrcode import QRcode
 
-#import json
-#import pyqrcode
+import json
+import pyqrcode
 import geocoder
 import time
-from flask import Flask, request
-''''
+#from flask import Flask, request
+
 adults_length = 2
 kids_length = 2
 adults_cost_length = 3
 kids_cost_length = 4
 payment_mode_length = 4
 total_length = 5
-'''
+
 app = Flask(__name__)
-'''
+
 QRcode(app)
 app.secret_key = 'any random string'
 app.config["MONGO_URI"] = "mongodb://localhost:27017/harinidb"
 mongodb_client = PyMongo(app)
 db = mongodb_client.db
-'''
+
 @app.route('/login', methods=['GET'])
 def hello_world():
     arg = request.args.get('uname')
