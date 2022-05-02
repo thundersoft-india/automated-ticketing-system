@@ -70,8 +70,8 @@ def hello_world():
         #return (',invlaid_ticket,'+'unique sequence number '+arg[1:16]+',Machine ID'+arg[17:25]+',Date and time of ticket '+arg[26:36]+',Gender '+arg[36])
         #return ('invalid ticket,'+arg[1:16]+','+arg[17:25]+','+arg[26:36]+','+arg[36]+','+str(validity))
 
-@app.route('/raja')
-def raja():
+@app.route('/epoch')
+def epoch():
     a=time.time()
     c=int(a)
     b=str(c)
