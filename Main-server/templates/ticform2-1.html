@@ -146,14 +146,19 @@ body {
 <script defer>
 
   function total(){
-    let adult = document.getElementById("adult").value;
-  let kid = document.getElementById("kids").value;
-  if(adult === ""){
-    document.getElementById("a").innerText = parseInt(kid);
-  }else if(kid === ""){
-    document.getElementById("a").innerText = parseInt(adult);
+  debugger
+    let adult1 = document.getElementById("adult").value;
+  let kid1 = document.getElementById("kids").value;
+  print("enter adult value")
+  if(adult1>0){
+    document.getElementById("a").innerText = parseInt(kid1);
+    return false;
+  }else if(kid1>0){
+    document.getElementById("a").innerText = parseInt(adult1);
+    return false;
   }else{
-    document.getElementById("a").innerText = parseInt(adult)+parseInt(kid);
+    <!--document.getElementById("a").innerText = parseInt(adult1)+parseInt(kid1);-->
+    print("enter valid details")
   }
 }
 
@@ -190,7 +195,7 @@ document.getElementById("id2").style.display="block";
 
        <body style="background-color:white;">
 
-   <form id = "id1"class="login" action = "getQR" method = "post">
+   <form id = "id1"class="login" action = "getQR" method = "post"
 
     <h1 class="login-title">Ticket Form</h1>
 
@@ -199,7 +204,7 @@ document.getElementById("id2").style.display="block";
     <input type="text" id="kids" name="KIDS" class="login-input" placeholder="KIDS" autofocus><br>
 
 
-   <input type="button" value="SUBMIT" class="login-button" onclick="pay()">
+   <input type="button" value="SUBMIT" class="login-button" onclick="pay()",onclick=return"total()">
 
  </form>
 
@@ -299,7 +304,8 @@ document.getElementById("id2").style.display="block";
   <p style="font-size: 20px;">*** VISIT AGAIN ***</p>
 
 
-  <button type="button">Print</button>
+  <button onclick="window.print()">Print </button>
+
 </div>
 
 </body>
