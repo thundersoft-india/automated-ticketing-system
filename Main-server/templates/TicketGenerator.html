@@ -15,6 +15,13 @@ img {
 }
 </style>
 <style>
+/* This style sets the width of all images to 100%: */
+img {
+  width: 80%;
+}
+</style>
+
+<style>
 p {text-align: center;}
 </style>
 <style>
@@ -22,11 +29,14 @@ p.ex1 {
   font-size: 30px;
 }
 </style>
+<style>
+div {text-align: left;}
+</style>
 
 <body>
-
-
-       <img src = "{{url_for('static',filename='equality.jpg')}}">
+        <p style="font-size: 20px;">*** Powered by ***</p>
+       <img src = "{{url_for('static',filename='thundersoft.png')}}">
+       <img src = "{{url_for('static',filename='equality1.jpg')}}">
        <body style="background-color:white;">
        <div class="part2" id="id2">
        <div class="center">
@@ -54,34 +64,79 @@ p.ex1 {
      </body>
            <h2 id="displayDateTime"></h2>
            Date: <span id="currentDate"></span>
-       <br><br>
+       <br>
         <script>
        var today = new Date();
        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
       document.getElementById("currentDate").innerHTML = date;
        </script>
-        Time: <span id="currentTime"></span>
-           <br><br>
-        <script>
-            var today = new Date();
-            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-            document.getElementById("currentTime").innerHTML = time;
-        </script>
+           <script type="text/javascript">
+		var myDate = new Date();
+		var myDay = myDate.getDay();
+		// Array of days.
+		var weekday = ['Sunday', 'Monday', 'Tuesday',
+			'Wednesday', 'Thursday', 'Friday', 'Saturday'
+		];
+		document.write("Today : " + weekday[myDay]);
+		document.write("<br>");
+		// get hour value.
+		var hours = myDate.getHours();
+		var ampm = hours >= 12 ? 'PM' : 'AM';
+		hours = hours % 12;
+		hours = hours ? hours : 12;
+		var minutes = myDate.getMinutes();
+		minutes = minutes < 10 ? '0' + minutes : minutes;
+		var myTime = (hours) + " " + " : " + (minutes) +
+			" : " + (myDate.getMilliseconds()) + ampm ;
+		document.write("Entering Time" + ":"+(myTime));
+		document.write("<br>");
+		if(hours<=12){
+		    if(hours==1){
+		        document.write("\Finishing time is  : " + (hours+5) + " "+"0'clock");
+		    }
+		    if(hours==2){
+		          document.write("\Finishing time is  : " + (hours+4) +" "+ "0'clock");
+		    }
+		    if(hours==3){
+		          document.write("\Finishing time is  : " + (hours+3) + " "+"0'clock");
+		    }
+		    if(hours==4){
+		          document.write("\Finishing time is  : " + (hours+2) + " "+"0'clock");
+		    }
+		    if(hours==5){
+		          document.write("\Finishing time is  : " + (hours+1) +" "+ "0' clock");
+		    }
+		    if(hours==6){
+		          document.write("\Finishing time is  : " + (hours)+" " +"0' clock");
+		    }
+		    if(hours==7){
+		          document.write("\Finishing time is  : " + "1" + ":" + (minutes) );
+
+		    }
+		    if(hours==8){
+                  document.write("\Finishing time is  : " + "2" + ":" + (minutes) );
+		    }
+		    if(hours==9){
+                  document.write("\Finishing time is  : " + "3" + ":" + (minutes) );
+		    }
+		    if(hours==10){
+                  document.write("\Finishing time is  : " + "4" + ":" + (minutes) );
+		    }
+		    if(hours==11){
+                  document.write("\Finishing time is  : " + "5" + ":" + (minutes) );
+		    }
+		    if(hours==12){
+		          document.write("\Finishing time is  : " + "6"+ " " +"0' clock");
+		    }
+		}
+
+
+	</script>
+     <div>Ticket Validity:6 Hours</div>
        </tr>
 
   </table>
  =======================================================================================================================================================
-<script>
-    function multiplyBy()
-    {
-      adult = document.getElementById(
-        "firstNumber").value;
-      kids = document.getElementById(
-        "150").value;
-      document.getElementById(
-        "results").innerHTML = adult * 150;
-    }
-  </script>
   <table>
     <tr>
       <td>SNo.</td>
