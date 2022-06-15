@@ -136,11 +136,17 @@ body {
 <form class="login" action = "getQR" method = "post">
     <h1 class="login-title">Ticket Form</h1>
     <!--<label for="mid">Machine ID:</label>-->
-    <input type="text" name="mid" class="login-input" placeholder="Machine ID" autofocus><br>
+    <input type="text" name="mid" class="login-input" placeholder="Visitor_Name" autofocus><br>
+    <!--<label for="mid">Mobile No:</label>-->
+    <input type="number" name="mobile no" class="login-input" placeholder="Mobile No"  min="0" autofocus><br>
+    <!--<label for="mid">Email ID:</label>-->
+    <input type="text" name="email id" class="login-input" placeholder="Email ID" autofocus><br>
     <!--<label for="adult">No of Adults:</label>-->
-    <input type="number" name="adult" class="login-input" placeholder="Adults" ondrop="return false;"><br>
+    <input type="number" name="adult" class="login-input" placeholder="Adults" min="1" ><br>
     <!--<label for="child">No of Children:</label>-->
-	<input type="number" name="child" class="login-input" placeholder="Children" ondrop="return false;"><br>
+	<input type="number" name="child" class="login-input" placeholder="Children" min="1" ><br>
+    <!--<label for="mid">Amount:</label>-->
+    <input type="text" name="amount" class="login-input" placeholder="amount" autofocus><br>
     <input type="submit" value="SUBMIT" class="login-button">
 
  </form>
