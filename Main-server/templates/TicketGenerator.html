@@ -32,6 +32,12 @@ p.ex1 {
 <style>
 div {text-align: left;}
 </style>
+<style>
+  input.right {
+        float: right;
+      }
+ </style>
+
 
 <body>
         <p style="font-size: 20px;">*** Powered by ***</p>
@@ -59,10 +65,10 @@ div {text-align: left;}
                    Bill no: {{ billNo}}
                </h3>
            </head>
-     <body>
 
-     </body>
            <h2 id="displayDateTime"></h2>
+           Visitor_Name: {{m_id}}
+           <br>
            Date: <span id="currentDate"></span>
        <br>
         <script>
@@ -178,6 +184,9 @@ div {text-align: left;}
   <p style="font-size: 20px;">*** VISIT AGAIN ***</p>
 
   <button onclick="window.print()">Print </button>
+
+
+
 
 </div>
 
