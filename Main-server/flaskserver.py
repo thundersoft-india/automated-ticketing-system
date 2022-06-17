@@ -36,8 +36,8 @@ mongodb_client = PyMongo(app)
 db = mongodb_client.db
 
 # Twilio related Data
-account_sid = 'ACc5267b4eff9a0e7e340339148f622423'
-auth_token = '856c1f34e7a750a13f1cafcabbe59669'
+account_sid = sid
+auth_token = auth
 client = Client(account_sid, auth_token)
 
 
